@@ -14,6 +14,19 @@ import java.util.List;
 public class ProductCategoryService {
     @Autowired
     public ProductCategoryMapper productCategoryMapper;
+    public void addCategory(ProductCategoryDto productCategoryDto) {
+        productCategoryDto.setId(generateId());
+        productCategoryDto.setCreatedDate(getDateTime());
+        productCategoryMapper.insert(productCategoryDto);
+    }
+    private String generateId() {
+       return LocalDateTime.now().format(DateTimeFormatter.ofPattern("ddHHmmssSSS"));
+        //System.out.println(idNo);
+        //return idNo;
+    }
+   private String getDateTime() {
+      return LocalDateTime.now().format(DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss.SSS"));
+
     public ProductCategoryDto addCategory(ProductCategoryDto productCategoryDto) {
         productCategoryDto.setId(generateId());
         productCategoryDto.setCreatedDate(getDateTime());

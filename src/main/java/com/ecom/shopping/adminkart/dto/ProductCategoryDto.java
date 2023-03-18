@@ -1,5 +1,9 @@
 package com.ecom.shopping.adminkart.dto;
 
+import java.time.LocalDateTime;
+
+public class ProductCategoryDto {
+    private String id;
 
 public class ProductCategoryDto {
 
@@ -10,6 +14,29 @@ public class ProductCategoryDto {
     private String modifiedDate;
     private String deletedDate;
 
+    public String getModifiedDate() {
+        return modifiedDate;
+    }
+
+    public ProductCategoryDto setModifiedDate(String modifiedDate) {
+        this.modifiedDate = modifiedDate;
+        return this;
+    }
+
+    public String getDeletedDate() {
+        return deletedDate;
+    }
+
+    public ProductCategoryDto setDeletedDate(String deletedDate) {
+        this.deletedDate = deletedDate;
+        return this;
+    }
+
+    public String getId() {
+        return id;
+    }
+
+    public ProductCategoryDto setId(String id) {
     public long getId() {
         return id;
     }
