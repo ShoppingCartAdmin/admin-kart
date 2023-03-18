@@ -19,12 +19,11 @@ public class ProductCategoryService {
     }
     private String generateId() {
        return LocalDateTime.now().format(DateTimeFormatter.ofPattern("ddHHmmssSSS"));
-        //System.out.println(idNo);
-        //return idNo;
     }
    private String getDateTime() {
       return LocalDateTime.now().format(DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss.SSS"));
-
     }
-
+    public ProductCategoryDto getCategoryById(String id) {
+        return productCategoryMapper.getCategoryById(id);
+    }
 }
