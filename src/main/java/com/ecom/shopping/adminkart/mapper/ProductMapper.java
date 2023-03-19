@@ -1,6 +1,14 @@
 package com.ecom.shopping.adminkart.mapper;
 
 import com.ecom.shopping.adminkart.dto.ProductDto;
+import org.apache.ibatis.annotations.Insert;
+import org.apache.ibatis.annotations.Mapper;
+
+@Mapper
+public interface ProductMapper {
+    @Insert("insert into product(id,name,description,sku, categoryId,inventoryId,price,discountId,createdDate) values(#{id},#{name},#{description},#{sku},#{categoryId},#{inventoryId},#{price},#{discountId},#{createdDate})")
+    int insert(ProductDto product);
+}
 import org.apache.ibatis.annotations.Param;
 import org.apache.ibatis.annotations.Select;
 import org.apache.ibatis.annotations.Update;
