@@ -13,6 +13,7 @@ public class ProductCategoryDto {
         return id;
     }
 
+    public void setId(long id) {
     public ProductCategoryDto setId(long id) {
         this.id = id;
         return this;
