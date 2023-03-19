@@ -34,11 +34,4 @@ public class ProductCategoryService {
         return productCategoryMapper.findAllCategory();
     }
 
-
-    private ProductCategoryMapper productCategoryMapper;
-
-    public List<ProductCategoryDto> getAllCategory() {
-        return productCategoryMapper.findAllCategory();
-    }
-
 }
