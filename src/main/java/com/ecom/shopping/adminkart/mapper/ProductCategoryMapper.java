@@ -25,6 +25,7 @@ public interface ProductCategoryMapper {
     @Select("select * from product_category")
     List<ProductCategoryDto> findAllCategory();
 
+
 import org.apache.ibatis.annotations.Insert;
 import org.apache.ibatis.annotations.Insert;
 import org.apache.ibatis.annotations.Mapper;
