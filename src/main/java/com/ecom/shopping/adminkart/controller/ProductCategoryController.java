@@ -18,8 +18,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+
 
 import java.util.List;
 
@@ -49,8 +48,6 @@ public class ProductCategoryController {
     public void addCategory(@RequestBody ProductCategoryDto productCategoryDto) {
         productCategoryService.addCategory(productCategoryDto);
     }
-
-
     @GetMapping("/getAllCategory")
     public List<ProductCategoryDto> getAllCategory() {
         return productCategoryService.getAllCategory();
