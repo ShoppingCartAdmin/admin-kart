@@ -17,6 +17,7 @@ public class ProductCategoryService {
     public List<ProductCategoryDto> getAllCategory() {
         return productCategoryMapper.findAllCategory();
     }
+
     public ProductCategoryDto getCategoryById(String id) {
         return productCategoryMapper.getCategoryById(id);
     }

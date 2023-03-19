@@ -25,6 +25,7 @@ public class ProductCategoryController {
     @GetMapping("/getAllCategory")
     public List<ProductCategoryDto> getAllCategory() {
         return productCategoryService.getAllCategory();
-
     }
+
+
 }
