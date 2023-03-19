@@ -8,9 +8,6 @@ import org.springframework.stereotype.Service;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.List;
-import java.time.LocalDateTime;
-import java.time.format.DateTimeFormatter;
-import java.util.List;
 
 @Service
 public class ProductCategoryService {
@@ -35,10 +32,6 @@ public class ProductCategoryService {
     }
 
 
-    private ProductCategoryMapper productCategoryMapper;
 
-    public List<ProductCategoryDto> getAllCategory() {
-        return productCategoryMapper.findAllCategory();
-    }
 
 }
