@@ -39,10 +39,7 @@ public class ProductCategoryController {
         return productCategoryService.getAllCategory();
 
     }
-    @PostMapping("/addCategory")
-    public void addCategory(@RequestBody ProductCategoryDto productCategoryDto) {
-        productCategoryService.addCategory(productCategoryDto);
-    }
+
 
     public ProductCategoryDto addCategory(@RequestBody ProductCategoryDto productCategoryDto) {
       return  productCategoryService.addCategory(productCategoryDto);

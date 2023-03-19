@@ -20,6 +20,7 @@ import org.apache.ibatis.annotations.Select;
 
 import java.util.List;
 
+
 @Mapper
 public interface ProductCategoryMapper {
     @Insert("insert into product_category(id,name,description,createdDate,modifiedDate,deletedDate) " + "VALUES (#{id},#{name},#{description},#{createdDate},#{modifiedDate},#{deletedDate})")
