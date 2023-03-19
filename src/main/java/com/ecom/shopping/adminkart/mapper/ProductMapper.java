@@ -13,6 +13,7 @@ public interface ProductMapper {
 }
 
     @Select("select * from product_category Where id=#{id}")
+    @Select("select * from product Where id=#{id}")
     Optional<ProductDto> getId(long id);
     @Update("UPDATE product SET name=#{name},description=#{description},modifiedDate=#{modifiedDate}  WHERE id=#{id}")
     int updateProductById(@Param("id") long id, @Param("name") String name, @Param("description") String description, @Param("modifiedDate") String modifiedDate);
