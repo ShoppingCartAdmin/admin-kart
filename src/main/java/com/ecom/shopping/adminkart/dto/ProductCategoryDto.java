@@ -1,8 +1,8 @@
 package com.ecom.shopping.adminkart.dto;
 
-import java.time.LocalDateTime;
 
 public class ProductCategoryDto {
+    private long id;
     private String id;
 public class ProductCategoryDto {
     private int id;
@@ -18,12 +18,13 @@ public class ProductCategoryDto {
     private String modifiedDate;
     private String deletedDate;
 
-    public int getId() {
+    public long getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public ProductCategoryDto setId(long id) {
         this.id = id;
+        return this;
     public int getId() {
         return id;
     }
@@ -89,8 +90,9 @@ public class ProductCategoryDto {
         return name;
     }
 
-    public void setName(String name) {
+    public ProductCategoryDto setName(String name) {
         this.name = name;
+        return this;
     public ProductCategoryDto setName(String name) {
         this.name = name;
         return this;
@@ -104,15 +106,18 @@ public class ProductCategoryDto {
         this.description = description;
         return this;
     public void setDescription(String description) {
+    public ProductCategoryDto setDescription(String description) {
         this.description = description;
+        return this;
     }
 
     public String getCreatedDate() {
         return createdDate;
     }
 
-    public void setCreatedDate(String createdDate) {
+    public ProductCategoryDto setCreatedDate(String createdDate) {
         this.createdDate = createdDate;
+        return this;
     }
 
     public String getModifiedDate() {
@@ -122,8 +127,6 @@ public class ProductCategoryDto {
     public ProductCategoryDto setModifiedDate(String modifiedDate) {
         this.modifiedDate = modifiedDate;
         return this;
-    public void setModifiedDate(String modifiedDate) {
-        this.modifiedDate = modifiedDate;
     }
 
     public String getDeletedDate() {
