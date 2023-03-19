@@ -2,6 +2,7 @@ package com.ecom.shopping.adminkart.dto;
 
 
 public class ProductCategoryDto {
+
     private long id;
     private String id;
 public class ProductCategoryDto {
@@ -93,19 +94,12 @@ public class ProductCategoryDto {
     public ProductCategoryDto setName(String name) {
         this.name = name;
         return this;
-    public ProductCategoryDto setName(String name) {
-        this.name = name;
-        return this;
     }
 
     public String getDescription() {
         return description;
     }
 
-    public ProductCategoryDto setDescription(String description) {
-        this.description = description;
-        return this;
-    public void setDescription(String description) {
     public ProductCategoryDto setDescription(String description) {
         this.description = description;
         return this;
