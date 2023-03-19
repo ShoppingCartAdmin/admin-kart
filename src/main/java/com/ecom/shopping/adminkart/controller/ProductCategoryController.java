@@ -17,17 +17,11 @@ import java.util.List;
 public class ProductCategoryController {
     @Autowired
     private ProductCategoryService productCategoryService;
-    @PostMapping("/addCategory")
-    public void addCategory(@RequestBody ProductCategoryDto productCategoryDto) {
-        productCategoryService.addCategory(productCategoryDto);
-    }
     @GetMapping("/{id}")
     public ResponseEntity<ProductCategoryDto> getCategoryById(@PathVariable String id) {
         ProductCategoryDto category=productCategoryService.getCategoryById(id);
         return ResponseEntity.ok(category);
     }
-
-
     @GetMapping("/getAllCategory")
     public List<ProductCategoryDto> getAllCategory() {
         return productCategoryService.getAllCategory();

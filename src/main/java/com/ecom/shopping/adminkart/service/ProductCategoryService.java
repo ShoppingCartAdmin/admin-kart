@@ -16,17 +16,6 @@ public class ProductCategoryService {
 
     public List<ProductCategoryDto> getAllCategory() {
         return productCategoryMapper.findAllCategory();
-    public ProductCategoryMapper productCategoryMapper;
-    public void addCategory(ProductCategoryDto productCategoryDto) {
-        productCategoryDto.setId(generateId());
-        productCategoryDto.setCreatedDate(getDateTime());
-        productCategoryMapper.insert(productCategoryDto);
-    }
-    private String generateId() {
-       return LocalDateTime.now().format(DateTimeFormatter.ofPattern("ddHHmmssSSS"));
-    }
-   private String getDateTime() {
-      return LocalDateTime.now().format(DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss.SSS"));
     }
     public ProductCategoryDto getCategoryById(String id) {
         return productCategoryMapper.getCategoryById(id);
