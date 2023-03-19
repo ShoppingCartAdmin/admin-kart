@@ -20,3 +20,21 @@ public class ProductService {
 
 }
 
+    public ProductDto updateProductById(ProductDto productDto) {
+        Optional<ProductDto> existingUser = productMapper.getId(productDto.getId());
+        ProductDto updatedUser = null;
+        if (existingUser.isPresent()) {
+            updatedUser = existingUser.get();
+            updatedUser.setId(productDto.getId());
+            updatedUser.setName(productDto.getName());
+            updatedUser.setDescription(productDto.getDescription());
+            updatedUser.setModifiedDate(getDateTime());
+            productMapper.updateProductById(productDto.getId(), productDto.getName(), productDto.getDescription(), updatedUser.getModifiedDate());
+        }
+        return updatedUser;
+    }
+    private String getDateTime() {
+        return LocalDateTime.now().format(DateTimeFormatter.ofPattern("yyyy-MM-dd HH:ss"));
+    }
+
+}
