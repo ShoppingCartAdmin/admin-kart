@@ -23,6 +23,9 @@ import org.springframework.web.bind.annotation.GetMapping;
 import java.util.List;
 
 
+import java.util.List;
+
+
 
 @RestController
 @RequestMapping("/category")
@@ -38,6 +41,13 @@ public class ProductCategoryController {
     @PostMapping("/addCategory")
     public ProductCategoryDto addCategory(@RequestBody ProductCategoryDto productCategoryDto) {
       return  productCategoryService.addCategory(productCategoryDto);
+    public void addCategory(@RequestBody ProductCategoryDto productCategoryDto) {
+        productCategoryService.addCategory(productCategoryDto);
+    }
+    @GetMapping("/getAllCategory")
+    public List<ProductCategoryDto> getAllCategory() {
+        return productCategoryService.getAllCategory();
+
     }
     @GetMapping("/getAllCategory")
     public List<ProductCategoryDto> getAlCategory() {

@@ -41,6 +41,66 @@ public class ProductCategoryDto {
         return id;
     }
 
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    public String getCreatedDate() {
+        return createdDate;
+    }
+
+    public void setCreatedDate(String createdDate) {
+        this.createdDate = createdDate;
+    }
+
+        return this;
+    public String getModifiedDate() {
+        return modifiedDate;
+    }
+
+    public ProductCategoryDto setModifiedDate(String modifiedDate) {
+        this.modifiedDate = modifiedDate;
+        return this;
+    public void setModifiedDate(String modifiedDate) {
+        this.modifiedDate = modifiedDate;
+    }
+
+    public String getDeletedDate() {
+        return deletedDate;
+    }
+
+    public ProductCategoryDto setDeletedDate(String deletedDate) {
+        this.deletedDate = deletedDate;
+        return this;
+    }
+
+    public String getId() {
+    public long getId() {
+        return id;
+    }
+
+    public ProductCategoryDto setId(long id) {
+        this.id = id;
+    public int getId() {
+        return id;
+    }
+
     public ProductCategoryDto setId(long id) {
         this.id = id;
         return this;
