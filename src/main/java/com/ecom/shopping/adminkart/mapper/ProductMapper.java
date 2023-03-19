@@ -8,6 +8,7 @@ import org.apache.ibatis.annotations.Update;
 import java.util.Optional;
 
 public interface ProductMapper {
+    @Select("select * from product Where id=#{id}")
     @Select("SELECT * FROM product WHERE categoryId = #{categoryId}")
     ProductDto getCategoryById(long categoryId);
 }
