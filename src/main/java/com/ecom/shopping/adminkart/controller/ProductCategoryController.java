@@ -41,13 +41,6 @@ public class ProductCategoryController {
     public void addCategory(@RequestBody ProductCategoryDto productCategoryDto) {
         productCategoryService.addCategory(productCategoryDto);
     }
-    @GetMapping("/getAllCategory")
-    public List<ProductCategoryDto> getAllCategory() {
-        return productCategoryService.getAllCategory();
-
-    }
-
-
 
     @GetMapping("/getAllCategory")
     public List<ProductCategoryDto> getAllCategory() {
