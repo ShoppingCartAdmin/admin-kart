@@ -14,9 +14,6 @@ import java.util.List;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.List;
-import java.time.LocalDateTime;
-import java.time.format.DateTimeFormatter;
-import java.util.List;
 
 
 @Service
@@ -56,6 +53,7 @@ public class ProductCategoryService {
     public List<ProductCategoryDto> getAllCategory() {
         return productCategoryMapper.findAllCategory();
     }
+
 
     public ProductCategoryDto getCategoryById(String id) {
         return productCategoryMapper.getCategoryById(id);

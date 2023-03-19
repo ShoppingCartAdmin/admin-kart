@@ -49,7 +49,7 @@ public class ProductCategoryController {
         productCategoryService.addCategory(productCategoryDto);
     }
     @GetMapping("/getAllCategory")
-    public List<ProductCategoryDto> getAllCategory() {
+    public List<ProductCategoryDto> getAlCategory() {
         return productCategoryService.getAllCategory();
 
     }

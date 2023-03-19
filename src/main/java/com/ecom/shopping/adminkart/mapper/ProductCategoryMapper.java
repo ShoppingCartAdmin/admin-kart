@@ -31,4 +31,5 @@ public interface ProductCategoryMapper {
     List<ProductCategoryDto> findAllCategory();
     @Select("SELECT * FROM product_category WHERE id = #{id}")
     ProductCategoryDto getCategoryById(String id);
+
 }

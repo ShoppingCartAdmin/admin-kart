@@ -135,47 +135,4 @@ public class ProductCategoryDto {
         this.deletedDate = deletedDate;
         return this;
     }
-
-    public String getId() {
-        return id;
-    }
-
-    public ProductCategoryDto setId(String id) {
-        this.id = id;
-        return this;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public ProductCategoryDto setName(String name) {
-        this.name = name;
-        return this;
-    }
-
-    public String getDescription() {
-        return description;
-    }
-
-    public ProductCategoryDto setDescription(String description) {
-        this.description = description;
-        return this;
-    }
-
-    public String getCreatedDate() {
-        return createdDate;
-    }
-
-    public ProductCategoryDto setCreatedDate(String createdDate) {
-        this.createdDate = createdDate;
-        return this;
-    public void setDeletedDate(String deletedDate) {
-        this.deletedDate = deletedDate;
-    public ProductCategoryDto setCreatedDate(String createdDate) {
-        this.createdDate = createdDate;
-        return this;
-    public void setDeletedDate(String deletedDate) {
-        this.deletedDate = deletedDate;
-    }
 }
