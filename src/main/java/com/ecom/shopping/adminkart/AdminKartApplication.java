@@ -1,6 +1,6 @@
 package com.ecom.shopping.adminkart;
 
-import com.ecom.shopping.adminkart.controller.ProductCategoryController;
+import com.ecom.shopping.adminkart.dto.ProductCategoryDto;
 import org.apache.ibatis.type.MappedTypes;
 import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;

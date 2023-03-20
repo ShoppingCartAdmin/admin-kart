@@ -1,18 +1,18 @@
 package com.ecom.shopping.adminkart.dto;
 
 public class ProductCategoryDto {
-    private int id;
+    private long id;
     private String name;
     private String description;
     private String createdDate;
     private String modifiedDate;
     private String deletedDate;
 
-    public int getId() {
+    public long getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(long id) {
         this.id = id;
     }
 
