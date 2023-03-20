@@ -10,9 +10,6 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 @MappedTypes({ProductCategoryDto.class})
 @MapperScan("com.ecom.shopping.adminKart.mapper")
 
-@MappedTypes(value = {ProductCategoryDto.class})
-@MapperScan("com.ecom.shopping.adminkart.mapper")
-
 @SpringBootApplication
 public class AdminKartApplication {
 
