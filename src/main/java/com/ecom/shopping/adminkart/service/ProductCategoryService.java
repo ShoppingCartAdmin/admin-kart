@@ -8,18 +8,17 @@ import org.springframework.stereotype.Service;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.List;
-import java.time.LocalDateTime;
-import java.time.format.DateTimeFormatter;
-import java.util.List;
+
 
 @Service
 public class ProductCategoryService {
     @Autowired
     public ProductCategoryMapper productCategoryMapper;
-    public void addCategory(ProductCategoryDto productCategoryDto) {
+    public ProductCategoryDto addCategory(ProductCategoryDto productCategoryDto) {
         productCategoryDto.setId(generateId());
         productCategoryDto.setCreatedDate(getDateTime());
         productCategoryMapper.insert(productCategoryDto);
+        return productCategoryDto;
     }
         private long generateId() {
           return(long) Math.floor(Math.random() * 999999999) + 800;
