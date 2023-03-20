@@ -6,6 +6,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 
 @Service
 public class ProductCategoryService {
@@ -16,4 +18,7 @@ public class ProductCategoryService {
         return productCategoryMapper.findAllCategory();
     }
 
+    public ProductCategoryDto getCategoryById(String id) {
+        return productCategoryMapper.getCategoryById(id);
+    }
 }
