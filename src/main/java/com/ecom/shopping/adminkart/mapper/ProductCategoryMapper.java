@@ -21,6 +21,6 @@ public interface ProductCategoryMapper {
     Optional<ProductCategoryDto> getId(long id);
 
     @Update("UPDATE product_category SET name=#{name},description=#{description},modifiedDate=#{modifiedDate}  WHERE id=#{id}")
-    void updateCategoryById(@Param("id") long id, @Param("name") String name, @Param("description") String description, @Param("modifiedDate") String modifiedDate);
+    int updateCategoryById(@Param("id") long id, @Param("name") String name, @Param("description") String description, @Param("modifiedDate") String modifiedDate);
 
 }
