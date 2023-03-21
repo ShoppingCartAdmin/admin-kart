@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.*;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -28,4 +29,8 @@ public class ProductCategoryController {
     }
 
 
+    @PutMapping("/updateCategoryBy/{id}")
+    public ProductCategoryDto updateCategoryById(@RequestBody ProductCategoryDto productCategoryDto) {
+        return productCategoryService.updateCategoryById(productCategoryDto);
+    }
 }

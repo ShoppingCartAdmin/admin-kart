@@ -12,9 +12,15 @@ public class ProductController {
     @Autowired
     private ProductService productService;
 
+    @PostMapping("/addProduct")
+    public ProductDto addProduct(@RequestBody ProductDto productDto) {
+        return productService.addProduct(productDto);
+    }
+
     @GetMapping("/getProductBasedOnCategoryId/{categoryId}")
     public ResponseEntity<ProductDto> getProductByCategoryId(@PathVariable long categoryId) {
-        ProductDto category=productService.getProductByCategoryId(categoryId);
+        ProductDto category = productService.getProductByCategoryId(categoryId);
         return ResponseEntity.ok(category);
+
     }
 }

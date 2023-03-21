@@ -15,51 +15,6 @@ public class ProductDto {
     private String modifiedDate;
     private String deletedDate;
 
-    public long getInventoryId() {
-        return inventoryId;
-    }
-
-    public ProductDto setInventoryId(long inventoryId) {
-        this.inventoryId = inventoryId;
-        return this;
-    }
-
-    public BigDecimal getPrice() {
-        return price;
-    }
-
-    public ProductDto setPrice(BigDecimal price) {
-        this.price = price;
-        return this;
-    }
-
-    public long getDiscountId() {
-        return discountId;
-    }
-
-    public ProductDto setDiscountId(long discountId) {
-        this.discountId = discountId;
-        return this;
-    }
-
-    public String getCreatedDate() {
-        return createdDate;
-    }
-
-    public ProductDto setCreatedDate(String createdDate) {
-        this.createdDate = createdDate;
-        return this;
-    }
-
-    public String getModifiedDate() {
-        return modifiedDate;
-    }
-
-    public ProductDto setModifiedDate(String modifiedDate) {
-        this.modifiedDate = modifiedDate;
-        return this;
-    }
-
     public String getDeletedDate() {
         return deletedDate;
     }
@@ -111,6 +66,51 @@ public class ProductDto {
 
     public ProductDto setCategoryId(long categoryId) {
         this.categoryId = categoryId;
+        return this;
+    }
+
+    public long getInventoryId() {
+        return inventoryId;
+    }
+
+    public ProductDto setInventoryId(long inventoryId) {
+        this.inventoryId = inventoryId;
+        return this;
+    }
+
+    public BigDecimal getPrice() {
+        return price;
+    }
+
+    public ProductDto setPrice(BigDecimal price) {
+        this.price = price;
+        return this;
+    }
+
+    public long getDiscountId() {
+        return discountId;
+    }
+
+    public ProductDto setDiscountId(long discountId) {
+        this.discountId = discountId;
+        return this;
+    }
+
+    public String getCreatedDate() {
+        return createdDate;
+    }
+
+    public ProductDto setCreatedDate(String createdDate) {
+        this.createdDate = createdDate;
+        return this;
+    }
+
+    public String getModifiedDate() {
+        return modifiedDate;
+    }
+
+    public ProductDto setModifiedDate(String modifiedDate) {
+        this.modifiedDate = modifiedDate;
         return this;
     }
 }
