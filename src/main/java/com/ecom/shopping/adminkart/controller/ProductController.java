@@ -18,10 +18,7 @@ public class ProductController {
 
     @GetMapping("/getProductBasedOnCategoryId/{categoryId}")
     public ResponseEntity<ProductDto> getProductByCategoryId(@PathVariable long categoryId) {
-        ProductDto category=productService.getProductByCategoryId(categoryId);
+        ProductDto category = productService.getProductByCategoryId(categoryId);
         return ResponseEntity.ok(category);
-    @PutMapping("/updateProductBy/{id}")
-    public ProductDto updateProductById(@RequestBody ProductDto productDto) {
-        return productService.updateProductById(productDto);
     }
 }
