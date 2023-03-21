@@ -2,20 +2,19 @@ package com.ecom.shopping.adminkart.service;
 
 import com.ecom.shopping.adminkart.dto.ProductCategoryDto;
 import com.ecom.shopping.adminkart.mapper.ProductCategoryMapper;
+import com.ecom.shopping.adminkart.util.DateUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.time.LocalDateTime;
-import java.time.format.DateTimeFormatter;
 import java.util.List;
 import java.util.Optional;
-import java.time.LocalDateTime;
-import java.time.format.DateTimeFormatter;
 
 @Service
 public class ProductCategoryService {
     @Autowired
     private ProductCategoryMapper productCategoryMapper;
+    @Autowired
+    private DateUtil dateUtil;
 
     public List<ProductCategoryDto> getAllCategory() {
         return productCategoryMapper.findAllCategory();
@@ -29,7 +28,7 @@ public class ProductCategoryService {
             updatedUser.setId(productCategoryDto.getId());
             updatedUser.setName(productCategoryDto.getName());
             updatedUser.setDescription(productCategoryDto.getDescription());
-            updatedUser.setModifiedDate(getDateTime());
+            updatedUser.setModifiedDate(dateUtil.getDateTime());
             productCategoryMapper.updateCategoryById(productCategoryDto.getId(), productCategoryDto.getName(), productCategoryDto.getDescription(), updatedUser.getModifiedDate());
         }
         return updatedUser;
@@ -37,12 +36,5 @@ public class ProductCategoryService {
     public ProductCategoryDto getCategoryById(String id) {
         return productCategoryMapper.getCategoryById(id);
     }
-}
-
-    private String getDateTime() {
-        return LocalDateTime.now().format(DateTimeFormatter.ofPattern("yyyy-MM-dd HH:ss"));
-    }
-
-
 }
 
