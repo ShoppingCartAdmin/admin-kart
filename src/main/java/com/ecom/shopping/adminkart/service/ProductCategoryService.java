@@ -21,65 +21,7 @@ import java.util.List;
 public class ProductCategoryService {
     @Autowired
     public ProductCategoryMapper productCategoryMapper;
-    public void addCategory(ProductCategoryDto productCategoryDto) {
-        productCategoryDto.setId(generateId());
-        productCategoryDto.setCreatedDate(getDateTime());
-        productCategoryMapper.insert(productCategoryDto);
-    }
-        private long generateId() {
-          return(long) Math.floor(Math.random() * 999999999) + 800;
 
-        }
-
-   private String getDateTime() {
-       return LocalDateTime.now().format(DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss.SSS"));
-   }
-
-    public List<ProductCategoryDto> getAllCategory() {
-        return productCategoryMapper.findAllCategory();
-    public ProductCategoryMapper productCategoryMapper;
-    public void addCategory(ProductCategoryDto productCategoryDto) {
-    public ProductCategoryDto addCategory(ProductCategoryDto productCategoryDto) {
-        productCategoryDto.setId(generateId());
-        productCategoryDto.setCreatedDate(getDateTime());
-        productCategoryMapper.insert(productCategoryDto);
-        return productCategoryDto;
-    }
-        private long generateId() {
-          return(long) Math.floor(Math.random() * 999999999) + 800;
-
-        }
-
-   private String getDateTime() {
-       return LocalDateTime.now().format(DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss.SSS"));
-   }
-       return LocalDateTime.now().format(DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss.SSS"));
-   }
-
-    public List<ProductCategoryDto> getAllCategory() {
-        return productCategoryMapper.findAllCategory();
-    public ProductCategoryMapper productCategoryMapper;
-    public void addCategory(ProductCategoryDto productCategoryDto) {
-        productCategoryDto.setId(generateId());
-        productCategoryDto.setCreatedDate(getDateTime());
-        productCategoryMapper.insert(productCategoryDto);
-    }
-    private String generateId() {
-       return LocalDateTime.now().format(DateTimeFormatter.ofPattern("ddHHmmssSSS"));
-        //System.out.println(idNo);
-        //return idNo;
-    }
-   private String getDateTime() {
-      return LocalDateTime.now().format(DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss.SSS"));
-
-    private ProductCategoryMapper productCategoryMapper;
-
-    public List<ProductCategoryDto> getAllCategory() {
-        return productCategoryMapper.findAllCategory();
-    }
-
-
-    private ProductCategoryMapper productCategoryMapper;
     @Autowired
     private DateUtil dateUtil;
     @Autowired
@@ -93,11 +35,6 @@ public class ProductCategoryService {
     public List<ProductCategoryDto> getAllCategory() {
         return productCategoryMapper.findAllCategory();
     }
-
-
-
-
-
 
     public ProductCategoryDto getCategoryById(String id) {
         return productCategoryMapper.getCategoryById(id);

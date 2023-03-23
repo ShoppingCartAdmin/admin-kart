@@ -40,26 +40,12 @@ public class ProductCategoryController {
 
     @PostMapping("/addCategory")
     public ProductCategoryDto addCategory(@RequestBody ProductCategoryDto productCategoryDto) {
-      return  productCategoryService.addCategory(productCategoryDto);
-    public void addCategory(@RequestBody ProductCategoryDto productCategoryDto) {
-        productCategoryService.addCategory(productCategoryDto);
+        return productCategoryService.addCategory(productCategoryDto);
     }
     @GetMapping("/getAllCategory")
     public List<ProductCategoryDto> getAlCategory() {
         return productCategoryService.getAllCategory();
 
-    }
-    @GetMapping("/getAllCategory")
-    public List<ProductCategoryDto> getAlCategory() {
-        return productCategoryService.getAllCategory();
-
-    }
-
-
-
-    @GetMapping("/getAllCategory")
-    public List<ProductCategoryDto> getAllCategory() {
-        return productCategoryService.getAllCategory();
     }
 
 

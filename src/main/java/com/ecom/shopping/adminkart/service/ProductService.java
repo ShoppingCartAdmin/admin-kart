@@ -17,9 +17,6 @@ public class ProductService {
     public ProductDto getProductByCategoryId(long categoryId) {
         return productMapper.getCategoryById(categoryId);
     }
-
-}
-
     public ProductDto updateProductById(ProductDto productDto) {
         Optional<ProductDto> existingUser = productMapper.getId(productDto.getId());
         ProductDto updatedUser = null;
